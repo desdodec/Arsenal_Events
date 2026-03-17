@@ -1,7 +1,31 @@
 const audioById = {
   1: "Audio/02_final_penalty.wav",
   2: "Audio/01_tony_adams.wav",
+  3: "Audio/04_henry_goal.wav",
+  5: "Audio/03_invincibles_clincher.wav",
+  7: "Audio/07_Wenger.wav",
+  11: "Audio/05_Pires.wav",
+  12: "Audio/06_1989_miracle.wav",
 };
+
+const supplementalEvents = [
+  {
+    id: 11,
+    title: "Pires Highbury Finish",
+    x: 63,
+    y: 72,
+    anchor: "South half, East of center",
+    audioUrl: audioById[11],
+  },
+  {
+    id: 12,
+    title: "1989 Title Miracle Tribute",
+    x: 50,
+    y: 96,
+    anchor: "Clock End goal line, archival memory marker",
+    audioUrl: audioById[12],
+  },
+];
 
 const elements = {
   eventCount: document.querySelector("#event-count"),
@@ -54,7 +78,7 @@ async function loadEvents(path) {
   const csvText = await response.text();
   const rows = parseCsv(csvText);
 
-  return rows.map((row) => ({
+  const csvEvents = rows.map((row) => ({
     id: Number(row.ID),
     title: row.Event,
     x: Number(row["X (West to East)"]),
@@ -62,6 +86,8 @@ async function loadEvents(path) {
     anchor: row["Key Visual Anchor"] || "No anchor description yet.",
     audioUrl: audioById[Number(row.ID)] || "",
   }));
+
+  return [...csvEvents, ...supplementalEvents].sort((left, right) => left.id - right.id);
 }
 
 function renderMarkers(events) {
