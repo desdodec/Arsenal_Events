@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highbury Goal Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Arsenal Archive</p>
+        <h1>Highbury goals, moments, and commentary.</h1>
+        <p class="intro">
+          Click a numbered location on the pitch to open the event details and, where available,
+          play the original commentary clip with minimal delay.
+        </p>
+      </div>
+      <div class="hero-stats" aria-label="Project summary">
+        <div class="stat-card">
+          <span class="stat-label">Events</span>
+          <strong class="stat-value" id="event-count">0</strong>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Audio clips</span>
+          <strong class="stat-value" id="audio-count">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-grid">
+      <div class="map-card">
+        <div class="card-heading">
+          <div>
+            <p class="card-kicker">Interactive Pitch</p>
+            <h2>Highbury goal map</h2>
+          </div>
+          <p class="card-note">Hotspots come from <code>events.csv</code>.</p>
+        </div>
+
+        <div class="pitch-stage">
+          <div class="pitch-frame">
+            <img
+              class="pitch-image"
+              src="images/highbury_goals.svg"
+              alt="Illustrated Highbury pitch map with numbered event positions"
+            >
+            <div class="marker-layer" id="marker-layer" aria-label="Event markers"></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="detail-card">
+        <div class="card-heading">
+          <div>
+            <p class="card-kicker">Selected Event</p>
+            <h2 id="event-title">Choose a marker</h2>
+          </div>
+          <span class="audio-pill" id="audio-pill">No clip loaded</span>
+        </div>
+
+        <dl class="event-meta">
+          <div>
+            <dt>ID</dt>
+            <dd id="event-id">-</dd>
+          </div>
+          <div>
+            <dt>Coordinates</dt>
+            <dd id="event-coordinates">-</dd>
+          </div>
+          <div>
+            <dt>Anchor</dt>
+            <dd id="event-anchor">Tap a marker to inspect its position.</dd>
+          </div>
+        </dl>
+
+        <div class="player-panel">
+          <button class="primary-button" id="play-button" type="button" disabled>Play commentary</button>
+          <p class="player-hint" id="player-hint">
+            Two clips are available right now. The rest of the markers are ready for more audio files later.
+          </p>
+        </div>
+
+        <section class="event-list-panel" aria-labelledby="list-heading">
+          <div class="list-header">
+            <h3 id="list-heading">All events</h3>
+            <p id="list-summary">Loading events...</p>
+          </div>
+          <div class="event-list" id="event-list"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

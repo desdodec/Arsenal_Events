@@ -1,0 +1,49 @@
+<svg width="650" height="1000" viewBox="0 0 65 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+    
+    <rect width="65" height="100" fill="#2d7f3d" />
+
+    <style>
+        .marking { fill: none; stroke: white; stroke-width: 0.5; }
+        .spot { fill: white; stroke: none; }
+        .label { font-family: 'Arial', sans-serif; font-size: 3px; fill: black; text-anchor: middle; }
+        .point { fill: red; stroke: white; stroke-width: 0.3; }
+        .num { font-family: 'Arial', sans-serif; font-size: 2.2px; font-weight: bold; fill: white; text-anchor: middle; dominant-baseline: central; }
+    </style>
+
+    <rect x="0" y="0" width="65" height="100" class="marking" />
+    <line x1="0" y1="50" x2="65" y2="50" class="marking" /> <circle cx="32.5" cy="50" r="9.15" class="marking" /> <circle cx="32.5" cy="50" r="0.5" class="spot" /> <rect x="12.3" y="0" width="40.3" height="16.5" class="marking" /> <rect x="23.3" y="0" width="18.3" height="5.5" class="marking" /> <path d="M 23.35 16.5 A 9.15 9.15 0 0 1 41.65 16.5" class="marking" /> <circle cx="32.5" cy="11" r="0.5" class="spot" /> <rect x="12.3" y="83.5" width="40.3" height="16.5" class="marking" /> <rect x="23.3" y="94.5" width="18.3" height="5.5" class="marking" /> <path d="M 23.35 83.5 A 9.15 9.15 0 0 0 41.65 83.5" class="marking" /> <circle cx="32.5" cy="89" r="0.5" class="spot" /> <text x="32.5" y="-3" class="label" fill="white">NORTH BANK</text>
+    <text x="32.5" y="104" class="label" fill="white">CLOCK END</text>
+    <text x="-5" y="50" class="label" fill="white" transform="rotate(-90 -5 50)">WEST STAND</text>
+    <text x="70" y="50" class="label" fill="white" transform="rotate(90 70 50)">EAST STAND</text>
+
+    <circle cx="32.5" cy="11" r="1.5" class="point" />
+    <text x="32.5" y="11" class="num">1</text>
+
+    <circle cx="30" cy="18" r="1.5" class="point" />
+    <text x="30" y="18" class="num">2</text>
+
+    <circle cx="28" cy="85" r="1.5" class="point" />
+    <text x="28" y="85" class="num">3</text>
+
+    <circle cx="32.5" cy="50" r="1.5" class="point" />
+    <text x="32.5" y="50" class="num">4</text>
+
+    <circle cx="34" cy="6" r="1.5" class="point" />
+    <text x="34" y="6" class="num">5</text>
+
+    <circle cx="38" cy="88" r="1.5" class="point" />
+    <text x="38" y="88" class="num">6</text>
+
+    <circle cx="1" cy="45" r="1.5" class="point" />
+    <text x="1" y="45" class="num">7</text>
+
+    <circle cx="64" cy="50" r="1.5" class="point" />
+    <text x="64" y="50" class="num">8</text>
+
+    <circle cx="65" cy="0" r="1.5" class="point" />
+    <text x="65" y="0" class="num">9</text>
+
+    <circle cx="60" cy="30" r="1.5" class="point" />
+    <text x="60" y="30" class="num">10</text>
+
+</svg>
