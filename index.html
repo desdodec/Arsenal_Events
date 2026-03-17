@@ -8,23 +8,57 @@
 </head>
 <body>
   <main class="page-shell">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <img class="brand-mark" src="images/arsenal-cannon-mark.svg" alt="Arsenal-inspired crest mark">
+        <div class="brand-copy">
+          <p class="eyebrow">North London Football Memory</p>
+          <p class="brand-title">Highbury Archive</p>
+        </div>
+      </div>
+      <p class="topbar-note">Historic Arsenal moments mapped onto the old ground in club-inspired colours.</p>
+    </header>
+
     <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow">Arsenal Archive</p>
+        <p class="eyebrow">Matchday Atlas</p>
         <h1>Highbury goals, moments, and commentary.</h1>
         <p class="intro">
           Click a numbered location on the pitch to open the event details and, where available,
           play the original commentary clip with minimal delay.
         </p>
-      </div>
-      <div class="hero-stats" aria-label="Project summary">
-        <div class="stat-card">
-          <span class="stat-label">Events</span>
-          <strong class="stat-value" id="event-count">0</strong>
+        <div class="hero-ribbon">
+          <span>Arsenal red</span>
+          <span>Highbury gold</span>
+          <span>Archive audio</span>
         </div>
-        <div class="stat-card">
-          <span class="stat-label">Audio clips</span>
-          <strong class="stat-value" id="audio-count">0</strong>
+      </div>
+
+      <div class="hero-visual" aria-label="Highbury visual panel">
+        <div class="hero-stats">
+          <div class="stat-card stat-card-strong">
+            <span class="stat-label">Events</span>
+            <strong class="stat-value" id="event-count">0</strong>
+          </div>
+          <div class="stat-card">
+            <span class="stat-label">Audio clips</span>
+            <strong class="stat-value" id="audio-count">0</strong>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-panel-copy">
+            <p class="card-kicker">Club Identity</p>
+            <h2>Red, gold, cannon, marble halls.</h2>
+            <p>
+              The interface leans into Arsenal heritage while keeping the interactive map fast,
+              lightweight, and ready to grow with more moments.
+            </p>
+          </div>
+          <div class="hero-art">
+            <img class="hero-crest" src="images/arsenal-cannon-mark.svg" alt="Arsenal-inspired crest badge">
+            <img class="hero-plan" src="images/highbury_stadium_plan.svg" alt="Illustrated Highbury stadium plan">
+          </div>
         </div>
       </div>
     </section>
@@ -36,7 +70,10 @@
             <p class="card-kicker">Interactive Pitch</p>
             <h2>Highbury goal map</h2>
           </div>
-          <p class="card-note">Hotspots come from <code>events.csv</code>.</p>
+          <div class="card-meta">
+            <p class="card-note">Hotspots come from <code>events.csv</code>.</p>
+            <p class="card-note">Gold rings mark clips that are ready to play.</p>
+          </div>
         </div>
 
         <div class="pitch-stage">

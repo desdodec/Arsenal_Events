@@ -78,16 +78,24 @@ async function loadEvents(path) {
   const csvText = await response.text();
   const rows = parseCsv(csvText);
 
-  const csvEvents = rows.map((row) => ({
-    id: Number(row.ID),
-    title: row.Event,
-    x: Number(row["X (West to East)"]),
-    y: Number(row["Y (North to South)"]),
-    anchor: row["Key Visual Anchor"] || "No anchor description yet.",
-    audioUrl: audioById[Number(row.ID)] || "",
-  }));
+  const csvEvents = rows
+    .map((row) => ({
+      id: Number(readField(row, ["ID", "Id"])),
+      title: readField(row, ["Event_Name", "Event", "Title"]),
+      x: Number(readField(row, ["X_Coord", "X (West to East)", "X"])),
+      y: Number(readField(row, ["Y_Coord", "Y (North to South)", "Y"])),
+      anchor: readField(row, ["Modern_Landmark_Anchor", "Key Visual Anchor", "Anchor"]) || "No anchor description yet.",
+      audioUrl:
+        readField(row, ["Audio_File", "Audio File", "audioUrl"]) ||
+        audioById[Number(readField(row, ["ID", "Id"]))] ||
+        "",
+    }))
+    .filter((event) => Number.isFinite(event.id) && event.title);
 
-  return [...csvEvents, ...supplementalEvents].sort((left, right) => left.id - right.id);
+  const csvEventIds = new Set(csvEvents.map((event) => event.id));
+  const fallbackEvents = supplementalEvents.filter((event) => !csvEventIds.has(event.id));
+
+  return [...csvEvents, ...fallbackEvents].sort((left, right) => left.id - right.id);
 }
 
 function renderMarkers(events) {
@@ -288,6 +296,16 @@ function parseCsv(csvText) {
       return record;
     }, {})
   );
+}
+
+function readField(record, keys) {
+  for (const key of keys) {
+    if (Object.hasOwn(record, key) && record[key] !== undefined) {
+      return String(record[key]).trim();
+    }
+  }
+
+  return "";
 }
 
 function escapeHtml(value) {

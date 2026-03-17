@@ -1,11 +1,11 @@
-﻿ID,Event,X (West to East),Y (North to South),Key Visual Anchor
-1,Henry's Final Goal (Penalty),50,11,"Centered, 11m from North Bank"
-2,Tony Adams' Title Goal,45,18,"Slightly West of center, North end"
-3,Henry's Solo Goal Finish,40,85,"South End, West of center"
-4,Pitch Center Circle,50,50,Exact center of the garden
-5,"Vieira's ""Invincibles"" Goal",52,6,Right in front of North Bank goal
-6,Bergkamp's Hat-trick Finish,58,88,"South End, East of center"
-7,Wenger's Dugout,0,45,West Stand touchline
-8,The Tunnel Entrance,100,50,Center of the East Stand wall
-9,Corner Flag (NE),100,0,Top Right corner of the grass
-10,Rocastle Dribbling Zone,95,30,5m inside the East touchline
+﻿ID,Event_Name,X_Coord,Y_Coord,Modern_Landmark_Anchor
+1,Henry's Final Penalty (2006),50,11,Centered in front of North Bank block
+2,Tony Adams' Title Goal (1998),46,18,Slightly West of center towards Highbury Hill
+3,Henry Solo Goal vs Spurs (2002),43,89,Clock End penalty spot (South-West side)
+4,Invincibles Center Spot (2004),50,50,The central circular stone path/flowerbed
+5,Vieira Invincibles Clincher (2004),52,6,Near the North Bank center-left entrance
+6,Bergkamp Hat-trick vs Leicester (1997),58,88,Clock End box towards the East Stand
+7,Wenger's Original Dugout Spot,0,45,West Stand walkway (near the Silver Birch trees)
+8,The Historic Tunnel Mouth,100,50,Directly outside the East Stand Marble Hall doors
+9,Winterburn Corner Flag (NE),100,0,Top-right corner (Avenell Rd / North Bank corner)
+10,Rocastle's Dribbling Zone,92,30,Pathway running parallel to the East Stand flats

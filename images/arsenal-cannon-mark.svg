@@ -1,0 +1,28 @@
+<svg width="220" height="260" viewBox="0 0 220 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Arsenal-inspired cannon crest</title>
+  <desc id="desc">A stylized red and gold shield with a cannon motif inspired by Arsenal visual heritage.</desc>
+  <defs>
+    <linearGradient id="shieldRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d51f3f"/>
+      <stop offset="100%" stop-color="#9d0f25"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3d16f"/>
+      <stop offset="100%" stop-color="#a8832d"/>
+    </linearGradient>
+  </defs>
+  <path d="M110 10C151 10 188 25 205 46V147C205 196 169 233 110 250C51 233 15 196 15 147V46C32 25 69 10 110 10Z" fill="#f7f1e6"/>
+  <path d="M110 20C145 20 176 33 191 51V143C191 185 160 218 110 234C60 218 29 185 29 143V51C44 33 75 20 110 20Z" fill="url(#shieldRed)"/>
+  <path d="M110 30C141 30 168 41 180 56V138C180 174 153 203 110 216C67 203 40 174 40 138V56C52 41 79 30 110 30Z" fill="none" stroke="url(#gold)" stroke-width="4"/>
+  <circle cx="58" cy="132" r="18" fill="none" stroke="url(#gold)" stroke-width="8"/>
+  <circle cx="58" cy="132" r="6" fill="url(#gold)"/>
+  <rect x="58" y="127" width="82" height="10" rx="5" fill="url(#gold)"/>
+  <rect x="114" y="118" width="20" height="8" rx="3" fill="url(#gold)"/>
+  <path d="M138 132H170C178 132 184 126 184 118C184 126 190 132 198 132C190 132 184 138 184 146C184 138 178 132 170 132H138Z" fill="url(#gold)"/>
+  <path d="M118 138L146 166" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M69 85H152" stroke="#f7f1e6" stroke-width="2.5" stroke-opacity="0.55"/>
+  <path d="M78 94H143" stroke="#f7f1e6" stroke-width="2.5" stroke-opacity="0.55"/>
+  <path d="M70 181H150" stroke="#f7f1e6" stroke-width="2.5" stroke-opacity="0.55"/>
+  <text x="110" y="73" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700" fill="#f6e9cb" letter-spacing="2">HIGHBURY</text>
+  <text x="110" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#f6e9cb" letter-spacing="4">ARCHIVE</text>
+</svg>
